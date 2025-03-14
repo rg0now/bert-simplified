@@ -29,7 +29,7 @@ Note that this is an educational tool and has several simplifications:
 - Single attention layer
 - No fine-tuning phase
 
-The mode embeds these two-word sentences containing a noun and attribute (in random order) with the following structure:
+The model embeds these two-word sentences containing a noun and attribute (in random order) with the following structure:
 
 ```
 word1  word2  type1  type2
@@ -78,7 +78,7 @@ pip install numpy matplotlib
 
 ## Credits
 
-This implementation was created with assistance from Claude, an AI assistant by Anthropic.
+This implementation was created with assistance from [Claude](https://claude.ai), an AI assistant by Anthropic.
 
 ## License
 
