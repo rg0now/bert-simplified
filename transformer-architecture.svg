@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 800 600"
+   version="1.1"
+   id="svg119"
+   sodipodi:docname="transformer-architecture.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview121"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.4"
+     inkscape:cx="400"
+     inkscape:cy="148.57143"
+     inkscape:window-width="1910"
+     inkscape:window-height="1026"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg119" />
+  <!-- Styles -->
+  <defs
+     id="defs7">
+    <style
+       type="text/css"
+       id="style2">
+      .block {
+        fill: #e6f2ff;
+        stroke: #3385ff;
+        stroke-width: 2;
+        rx: 10;
+        ry: 10;
+      }
+      .block-header {
+        fill: #3385ff;
+        rx: 10;
+        ry: 10;
+      }
+      .block-text {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .header-text {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        fill: white;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .arrow {
+        stroke: #666;
+        stroke-width: 2;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+      .label {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .param-label {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        fill: #666;
+        text-anchor: start;
+      }
+    </style>
+    <marker
+       id="arrowhead"
+       markerWidth="10"
+       markerHeight="7"
+       refX="9"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#666"
+         id="polygon4" />
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text
+     x="352.17401"
+     y="29.032087"
+     font-family="Arial, sans-serif"
+     font-size="17.4269px"
+     font-weight="bold"
+     text-anchor="middle"
+     id="text9"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">SimpleTransformer Architecture</text>
+  <!-- Input and Embedding -->
+  <rect
+     x="49.896191"
+     y="60.438797"
+     width="644.72668"
+     height="65.946312"
+     class="block"
+     id="rect11" />
+  <rect
+     x="49.896191"
+     y="60.438797"
+     width="644.72668"
+     height="24.729868"
+     class="block-header"
+     id="rect13"
+     style="stroke-width:0.871343" />
+  <text
+     x="352.17401"
+     y="76.955948"
+     class="header-text"
+     id="text15"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">embed_inputs(input_ids)</text>
+  <text
+     x="352.17401"
+     y="103.09623"
+     class="block-text"
+     id="text17"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">Word Embedding (W_emb) + Positional Encoding</text>
+  <text
+     x="613.57684"
+     y="124.8798"
+     class="param-label"
+     id="text19"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">embeddings [2, d_model]</text>
+  <!-- Self-Attention Block -->
+  <rect
+     x="95.948097"
+     y="159.35826"
+     width="552.62286"
+     height="140.13591"
+     class="block"
+     id="rect21" />
+  <rect
+     x="95.948097"
+     y="159.35826"
+     width="552.62286"
+     height="24.729868"
+     class="block-header"
+     id="rect23"
+     style="stroke-width:0.871343" />
+  <text
+     x="352.17401"
+     y="181.51709"
+     class="header-text"
+     id="text25"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">self_attention(embeddings)</text>
+  <!-- Query, Key, Value Projections -->
+  <rect
+     x="123.57924"
+     y="192.33142"
+     width="147.3661"
+     height="32.973156"
+     rx="4.6051908"
+     ry="4.1216445"
+     fill="#f9f9f9"
+     stroke="#999999"
+     id="rect27"
+     style="stroke-width:0.871343" />
+  <text
+     x="186.61887"
+     y="220.72752"
+     class="block-text"
+     id="text29"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">W_query</text>
+  <rect
+     x="298.57648"
+     y="192.33142"
+     width="147.3661"
+     height="32.973156"
+     rx="4.6051908"
+     ry="4.1216445"
+     fill="#f9f9f9"
+     stroke="#999999"
+     id="rect31"
+     style="stroke-width:0.871343" />
+  <text
+     x="352.17401"
+     y="220.72752"
+     class="block-text"
+     id="text33"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">W_key</text>
+  <rect
+     x="473.57373"
+     y="192.33142"
+     width="147.3661"
+     height="32.973156"
+     rx="4.6051908"
+     ry="4.1216445"
+     fill="#f9f9f9"
+     stroke="#999999"
+     id="rect35"
+     style="stroke-width:0.871343" />
+  <text
+     x="517.72913"
+     y="220.72752"
+     class="block-text"
+     id="text37"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">W_value</text>
+  <!-- Attention Computation -->
+  <rect
+     x="123.57924"
+     y="241.79115"
+     width="322.36334"
+     height="41.216446"
+     rx="4.6051908"
+     ry="4.1216445"
+     fill="#f9f9f9"
+     stroke="#999999"
+     id="rect39"
+     style="stroke-width:0.871343" />
+  <text
+     x="269.39642"
+     y="277.36481"
+     class="block-text"
+     id="text41"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">Scaled Dot-Product Attention</text>
+  <!-- Output Projection -->
+  <rect
+     x="473.57373"
+     y="241.79115"
+     width="147.3661"
+     height="41.216446"
+     rx="4.6051908"
+     ry="4.1216445"
+     fill="#f9f9f9"
+     stroke="#999999"
+     id="rect43"
+     style="stroke-width:0.871343" />
+  <text
+     x="517.72913"
+     y="277.36481"
+     class="block-text"
+     id="text45"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">W_output</text>
+  <text
+     x="570.0097"
+     y="307.86182"
+     class="param-label"
+     id="text47"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">attention_output [2, d_model]</text>
+  <text
+     x="160.47858"
+     y="307.86182"
+     class="param-label"
+     id="text49"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">attention_weights [2, 2]</text>
+  <!-- Add and Norm -->
+  <rect
+     x="95.948097"
+     y="315.98077"
+     width="552.62286"
+     height="41.216446"
+     class="block"
+     id="rect51" />
+  <rect
+     x="95.948097"
+     y="315.98077"
+     width="552.62286"
+     height="24.729868"
+     class="block-header"
+     id="rect53"
+     style="stroke-width:0.871343" />
+  <text
+     x="352.17401"
+     y="347.07224"
+     class="header-text"
+     id="text55"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">Add and Norm (Residual Connection)</text>
+  <text
+     x="352.17401"
+     y="368.72723"
+     class="block-text"
+     id="text57"
+     transform="scale(1.057033,0.94604426)"
+     style="stroke-width:0.871343">embeddings + attention_output</text>
+  <!-- Feed-Forward Block -->
+  <rect
+     x="142"
+     y="373.68378"
+     width="460.51907"
+     height="98.919472"
+     class="block"
+     id="rect59" />
+  <rect
+     x="142"
+     y="373.68378"
+     width="460.51907"
+     height="24.729868"
+     class="block-header"
+     id="rect61"
+     style="stroke-width:0.871343" />
+  <text
+     x="352.17401"
+     y="408.06622"
+     class="header-text"
+     id="text63"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">feed_forward(attention_output)</text>
+  <!-- FF Layers -->
+  <rect
+     x="169.63115"
+     y="406.65695"
+     width="174.99725"
+     height="32.973156"
+     rx="4.6051908"
+     ry="4.1216445"
+     fill="#f9f9f9"
+     stroke="#999999"
+     id="rect65"
+     style="stroke-width:0.871343" />
+  <text
+     x="243.25615"
+     y="449.39075"
+     class="block-text"
+     id="text67"
+     transform="scale(1.057033,0.94604426)"
+     style="stroke-width:0.871343">W_ff1, b_ff1 + ReLU</text>
+  <rect
+     x="399.89069"
+     y="406.65695"
+     width="174.99725"
+     height="32.973156"
+     rx="4.6051908"
+     ry="4.1216445"
+     fill="#f9f9f9"
+     stroke="#999999"
+     id="rect69"
+     style="stroke-width:0.871343" />
+  <text
+     x="461.09186"
+     y="449.39075"
+     class="block-text"
+     id="text71"
+     transform="scale(1.057033,0.94604426)"
+     style="stroke-width:0.871343">W_ff2, b_ff2</text>
+  <text
+     x="526.44257"
+     y="490.84381"
+     class="param-label"
+     id="text73"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">ff_output [2, d_model]</text>
+  <!-- Final Add and Norm -->
+  <rect
+     x="142"
+     y="489.08984"
+     width="460.51907"
+     height="41.216446"
+     class="block"
+     id="rect75" />
+  <rect
+     x="142"
+     y="489.08984"
+     width="460.51907"
+     height="24.729868"
+     class="block-header"
+     id="rect77"
+     style="stroke-width:0.871343" />
+  <text
+     x="352.17401"
+     y="530.05426"
+     class="header-text"
+     id="text79"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">Final Add and Norm</text>
+  <text
+     x="352.17401"
+     y="551.70923"
+     class="block-text"
+     id="text81"
+     transform="scale(1.057033,0.94604426)"
+     style="stroke-width:0.871343">attention_output + ff_output</text>
+  <!-- Output Projection -->
+  <rect
+     x="234.10382"
+     y="546.79285"
+     width="276.31143"
+     height="41.216446"
+     class="block"
+     id="rect83" />
+  <rect
+     x="234.10382"
+     y="546.79285"
+     width="276.31143"
+     height="24.729868"
+     class="block-header"
+     id="rect85"
+     style="stroke-width:0.871343" />
+  <text
+     x="352.17401"
+     y="591.04822"
+     class="header-text"
+     id="text87"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">Output Projection</text>
+  <text
+     x="352.17401"
+     y="612.70325"
+     class="block-text"
+     id="text89"
+     transform="scale(1.057033,0.94604426)"
+     style="stroke-width:0.871343">W_out, b_out</text>
+  <text
+     x="456.73514"
+     y="617.05994"
+     class="param-label"
+     id="text91"
+     transform="scale(1.057033,0.94604426)"
+     style="stroke-width:0.871343">logits [vocab_size]</text>
+  <!-- Arrows connecting blocks -->
+  <path
+     d="m 372.25954,126.38511 v 32.97316"
+     class="arrow"
+     id="path93" />
+  <path
+     d="m 372.25954,299.49418 v 16.48658"
+     class="arrow"
+     id="path95" />
+  <path
+     d="m 372.25954,357.19721 v 16.48658"
+     class="arrow"
+     id="path97" />
+  <path
+     d="m 372.25954,472.60326 v 16.48658"
+     class="arrow"
+     id="path99" />
+  <path
+     d="m 372.25954,530.30628 v 16.48658"
+     class="arrow"
+     id="path101" />
+  <!-- Arrows between self-attention components -->
+  <path
+     d="m 197.26229,225.30458 v 16.48658"
+     class="arrow"
+     id="path103" />
+  <path
+     d="m 372.25954,225.30458 v 16.48658"
+     class="arrow"
+     id="path105" />
+  <path
+     d="m 547.25679,225.30458 v 16.48658"
+     class="arrow"
+     id="path107" />
+  <path
+     d="m 372.25954,283.00761 v 16.48657"
+     class="arrow"
+     id="path109" />
+  <path
+     d="m 445.9426,262.39938 h 27.63114"
+     class="arrow"
+     id="path111" />
+  <!-- Arrows between feed-forward components -->
+  <path
+     d="m 344.6284,423.14352 h 55.26229"
+     class="arrow"
+     id="path113" />
+  <path
+     d="m 487.38931,439.6301 v 32.97316"
+     class="arrow"
+     id="path115" />
+  <!-- Input and output labels -->
+  <text
+     x="90.771149"
+     y="55.172375"
+     class="param-label"
+     id="text117"
+     transform="scale(1.057033,0.94604427)"
+     style="stroke-width:0.871343">input_ids [2]</text>
+</svg>
